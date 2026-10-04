@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- Declares that this page uses modern HTML5 -->
+
+<html lang="en">
+  <!-- Starts the HTML document and identifies English as the page language -->
+
+  <head>
+    <!-- Contains setup information that is not displayed as page content -->
+
+    <meta charset="UTF-8" />
+    <!-- Allows normal characters and symbols to display correctly -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the layout responsive on phones and tablets -->
+
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Connects this HTML file to the CSS file named styles.css -->
+
+    <title>RA Data | Portfolio</title>
+    <!-- Text shown in the browser tab -->
+  </head>
+
+  <body>
+    <!-- Fixed navigation bar: stays at the top while the user scrolls -->
+    <nav id="navbar">
+      <!-- These links begin with # and navigate to sections on this page -->
+      <a href="#welcome-section">About</a>
+      <a href="#project-section">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Required welcome section -->
+    <section id="welcome-section">
+      <!-- Required non-empty h1 element -->
+      <div class="welcome-content">
+        <p class="eyebrow">Hello, I am</p>
+
+        <h1>RA — Data, Research, and Web Development</h1>
+
+        <p class="intro">
+          I build practical projects while developing skills in data,
+          computational science, and web development.
+        </p>
+
+        <!-- Navigation link to the Projects section -->
+        <a class="button" href="#project-section">Explore my projects</a>
+      </div>
+    </section>
+
+    <!-- Required Projects section; use project-section exactly as assigned -->
+    <section id="project-section">
+      <h2>Selected Projects</h2>
+
+      <p class="section-description">
+        A growing collection of freeCodeCamp practice projects and web-development work.
+      </p>
+
+      <div class="project-grid">
+        <!-- Required .project-tile element -->
+        <article class="project-tile">
+          <div class="project-icon" aria-hidden="true">🐧</div>
+
+          <h3>Build a Flappy Penguin</h3>
+
+          <p>
+            A CSS illustration using gradients, positioning, transforms,
+            pseudo-elements, and keyframe animation.
+          </p>
+
+          <!-- Required project link inside #project-section -->
+          <a
+            href="https://github.com/RA-Data2027/FreeCodeCamp-Practice-Assignments"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View project repository →
+          </a>
+        </article>
+
+        <!-- A second project tile is optional, but helps make the portfolio feel complete -->
+        <article class="project-tile">
+          <div class="project-icon" aria-hidden="true">🧪</div>
+
+          <h3>Data and Research Portfolio</h3>
+
+          <p>
+            Future projects connecting biological research, computation,
+            data analysis, and reproducible workflows.
+          </p>
+
+          <a href="#contact">Discuss this work →</a>
+        </article>
+
+        <article class="project-tile">
+          <div class="project-icon" aria-hidden="true">🌐</div>
+
+          <h3>Web Development Practice</h3>
+
+          <p>
+            Responsive HTML and CSS exercises focused on accessible,
+            organized, and user-friendly web interfaces.
+          </p>
+
+          <a href="#welcome-section">Back to introduction →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact section, used by the navbar and profile link -->
+    <section id="contact">
+      <h2>Connect</h2>
+
+      <p>
+        See my code and ongoing freeCodeCamp practice work on GitHub.
+      </p>
+
+      <!-- Required profile link: target="_blank" opens it in a new tab -->
+      <a
+        id="profile-link"
+        href="https://github.com/RA-Data2027"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Visit my GitHub profile
+      </a>
+    </section>
+
+    <footer>
+      <p>Built as part of freeCodeCamp Responsive Web Design practice.</p>
+    </footer>
+  </body>
+</html>
