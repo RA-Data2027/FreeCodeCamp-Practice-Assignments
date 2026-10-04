@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!-- 
+  Declares that this document uses HTML5.
+  This should be the first line in an HTML document.
+-->
+
+<html lang="en">
+  <!-- 
+    Starts the HTML document.
+    lang="en" tells browsers, screen readers, and translation tools
+    that the page's main language is English.
+  -->
+
+  <head>
+    <!-- 
+      The head contains page setup and metadata.
+      Most content in <head> is not displayed directly on the page.
+    -->
+
+    <meta charset="UTF-8" />
+    <!-- 
+      Sets the text encoding to UTF-8.
+      UTF-8 supports standard text plus characters such as the 💜 emoji.
+    -->
+
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- 
+      Connects this HTML page to the external CSS file named styles.css.
+
+      rel="stylesheet" identifies the linked file as a stylesheet.
+      href="./styles.css" means:
+      "./" = current folder
+      "styles.css" = CSS file containing the visual design.
+    -->
+
+    <title>Penguin</title>
+    <!-- 
+      Sets the page title shown in the browser tab.
+      It may also appear in bookmarks and search results.
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 
+      Helps the page display correctly on mobile devices.
+
+      width=device-width means the layout width should match the device screen.
+      initial-scale=1.0 means the browser should begin at normal, 100% zoom.
+    -->
+  </head>
+
+  <body>
+    <!-- 
+      The body contains all webpage content that can be displayed.
+      In this project, it contains the complete illustrated scene.
+    -->
+
+    <div class="left-mountain"></div>
+    <!-- 
+      Creates an empty div for the left/front mountain.
+
+      The class "left-mountain" connects this element to:
+      .left-mountain { ... }
+      in styles.css.
+
+      CSS gives it dimensions, a gradient, skewing, placement, and z-index.
+    -->
+
+    <div class="back-mountain"></div>
+    <!-- 
+      Creates an empty div for the background mountain.
+
+      CSS turns this into a rotated mountain and gives it a lower z-index
+      than the foreground mountain, so it appears farther away.
+    -->
+
+    <div class="sun"></div>
+    <!-- 
+      Creates an empty div for the sun.
+
+      CSS gives it a yellow background, a 50% border radius to make it
+      circular, and an absolute position at the upper-right of the scene.
+    -->
+
+    <div class="penguin">
+      <!-- 
+        Main container for the whole penguin.
+
+        CSS makes this a 300px by 300px relatively positioned container.
+        Its child pieces use absolute positioning, so their positions are
+        calculated relative to this penguin container.
+      -->
+
+      <div class="penguin-head">
+        <!-- 
+          Container for the penguin's head and facial features.
+          CSS creates a rounded gray-and-white head shape.
+        -->
+
+        <div class="face left"></div>
+        <!-- 
+          Creates the left white portion of the face.
+
+          This element belongs to two classes:
+          - "face": shared face styling, such as white color and oval shape
+          - "left": left-side positioning
+
+          CSS selector used:
+          .face { ... }
+          .face.left { ... }
+        -->
+
+        <div class="face right"></div>
+        <!-- 
+          Creates the right white portion of the face.
+
+          It also uses two classes:
+          - "face": shared face styling
+          - "right": right-side positioning
+
+          CSS selector used:
+          .face { ... }
+          .face.right { ... }
+        -->
+
+        <div class="chin"></div>
+        <!-- 
+          Creates the white lower-face/chin shape.
+          CSS makes this a wide rounded section that overlaps the face pieces.
+        -->
+
+        <div class="eye left">
+          <!-- 
+            Creates the left eye container.
+
+            "eye" gives both eyes shared black oval styling.
+            "left" positions this eye on the left side of the head.
+          -->
+
+          <div class="eye-lid"></div>
+          <!-- 
+            Creates the left eyelid.
+
+            It is nested inside the eye so CSS can position it relative
+            to that eye. The white lid partly covers the black eye shape,
+            producing a relaxed or partially closed-eye expression.
+          -->
+        </div>
+        <!-- Ends the left-eye container -->
+
+        <div class="eye right">
+          <!-- 
+            Creates the right eye container.
+
+            "eye" supplies shared styles.
+            "right" moves this eye to the right side of the head.
+          -->
+
+          <div class="eye-lid"></div>
+          <!-- 
+            Creates the right eyelid.
+            It uses the same .eye-lid CSS rules as the left eyelid.
+          -->
+        </div>
+        <!-- Ends the right-eye container -->
+
+        <div class="blush left"></div>
+        <!-- 
+          Creates the left pink cheek.
+
+          "blush" provides the pink rounded styling.
+          "left" places it on the left side of the face.
+        -->
+
+        <div class="blush right"></div>
+        <!-- 
+          Creates the right pink cheek.
+
+          "blush" provides shared styling.
+          "right" places it on the right side.
+        -->
+
+        <div class="beak top"></div>
+        <!-- 
+          Creates the top portion of the orange beak.
+
+          "beak" gives both pieces their orange color and rounded shape.
+          "top" sets this piece's width and placement.
+        -->
+
+        <div class="beak bottom"></div>
+        <!-- 
+          Creates the lower portion of the orange beak.
+
+          Keeping the beak in two separate divs lets CSS make the
+          top and bottom sections slightly different sizes and positions.
+        -->
+      </div>
+      <!-- Ends the penguin-head container -->
+
+      <div class="shirt">
+        <!-- 
+          Creates the penguin's shirt content area.
+
+          CSS positions it over the body and sets the font, color,
+          size, weight, and stacking order.
+        -->
+
+        <div>💜</div>
+        <!-- 
+          Displays a purple heart emoji on the shirt.
+
+          CSS selector:
+          .shirt div { ... }
+
+          positions this heart relative to the shirt container
+          and restores its default font weight.
+        -->
+
+        <p>I CSS</p>
+        <!-- 
+          Displays the text "I CSS" on the shirt.
+
+          <p> means paragraph. CSS styling inherited from .shirt makes
+          the text bold, 25px, Helvetica or another sans-serif font,
+          and dark gray.
+        -->
+      </div>
+      <!-- Ends the shirt container -->
+
+      <div class="penguin-body">
+        <!-- 
+          Creates the main body container.
+
+          CSS draws it as a rounded, shaded torso using a gray-to-white
+          linear gradient. It also creates an extra gray chest detail
+          through the .penguin-body::before pseudo-element.
+        -->
+
+        <div class="arm left"></div>
+        <!-- 
+          Creates the left arm/flipper.
+
+          "arm" supplies shared flipper shape, gradient, and layering.
+          "left" positions, rotates, mirrors, and animates it.
+
+          The left arm uses the "wave" animation defined by:
+          @keyframes wave { ... }
+        -->
+
+        <div class="arm right"></div>
+        <!-- 
+          Creates the right arm/flipper.
+
+          "arm" supplies shared styling.
+          "right" positions it on the right and rotates it outward.
+        -->
+
+        <div class="foot left"></div>
+        <!-- 
+          Creates the left orange foot.
+
+          "foot" supplies shared orange color, oval shape, and location.
+          "left" places it on the left and rotates it outward.
+        -->
+
+        <div class="foot right"></div>
+        <!-- 
+          Creates the right orange foot.
+
+          "foot" supplies shared styling.
+          "right" places it on the right and rotates it outward.
+        -->
+      </div>
+      <!-- Ends the penguin-body container -->
+    </div>
+    <!-- Ends the main penguin container -->
+
+    <div class="ground"></div>
+    <!-- 
+      Creates the ground/snow/water area across the lower part of the page.
+
+      CSS makes it viewport-width, gives it a horizontal blue gradient,
+      positions it behind the penguin but ahead of the mountains,
+      and pulls it upward slightly to overlap the scene.
+    -->
+  </body>
+  <!-- Ends all visible page content -->
+
+</html>
+<!-- Ends the HTML document -->
