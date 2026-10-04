@@ -1,0 +1,655 @@
+/* 
+  :root is the highest-level element in the document.
+  CSS variables declared here can be reused anywhere in the stylesheet.
+
+  Example usage:
+  background-color: var(--penguin-face);
+*/
+:root {
+  /* Main color for the penguin's white/light face areas */
+  --penguin-face: white;
+
+  /* Orange color used for the beak and feet.
+     "Picorna" is simply the variable name chosen in this project. */
+  --penguin-picorna: orange;
+
+  /* Gray color used for the penguin's skin/outer feathers */
+  --penguin-skin: gray;
+}
+
+
+/* Styles for the entire visible webpage */
+body {
+  /* Creates a diagonal background gradient:
+     45deg means the gradient runs diagonally.
+     It blends from sky blue to a pale yellow/cream color. */
+  background: linear-gradient(45deg, rgb(118, 201, 255), rgb(247, 255, 222));
+
+  /* Removes the browser's default outer spacing around the page */
+  margin: 0;
+
+  /* Removes the browser's default inner spacing in the body */
+  padding: 0;
+
+  /* Makes the body span the full width of its containing area */
+  width: 100%;
+
+  /* Makes the body as tall as the visible browser window.
+     vh means "viewport height":
+     100vh = 100% of the visible screen height. */
+  height: 100vh;
+
+  /* Hides anything that extends outside the visible screen.
+     This prevents scrollbars from appearing when shapes overflow. */
+  overflow: hidden;
+}
+
+
+/* Creates the left/front mountain shape */
+.left-mountain {
+  /* Sets the mountain's base width */
+  width: 300px;
+
+  /* Sets the mountain's base height */
+  height: 300px;
+
+  /* Creates a vertical color gradient for the mountain:
+     light icy green at the top and blue at the bottom. */
+  background: linear-gradient(rgb(203, 241, 228), rgb(80, 183, 255));
+
+  /* Removes this element from normal document flow.
+     It can now be placed precisely with top, left, margin, etc. */
+  position: absolute;
+
+  /* Skews the square/rectangle to make it look mountain-like.
+     First value = horizontal skew.
+     Second value = vertical skew. */
+  transform: skew(0deg, 44deg);
+
+  /* Controls stacking order.
+     A higher z-index appears in front of lower z-index elements. */
+  z-index: 2;
+
+  /* Moves the mountain down by 100 pixels from its normal position */
+  margin-top: 100px;
+}
+
+
+/* Creates the mountain positioned farther in the background */
+.back-mountain {
+  /* Base width of the mountain shape */
+  width: 300px;
+
+  /* Base height of the mountain shape */
+  height: 300px;
+
+  /* Background gradient with a slightly different blue tone */
+  background: linear-gradient(rgb(203, 241, 228), rgb(47, 170, 255));
+
+  /* Allows exact placement over the page */
+  position: absolute;
+
+  /* Places it behind the left mountain (z-index 2)
+     but generally above the page background */
+  z-index: 1;
+
+  /* Rotates the square 45 degrees to create a diamond/mountain shape */
+  transform: rotate(45deg);
+
+  /* Moves the mountain 110 pixels from the left edge */
+  left: 110px;
+
+  /* Moves the mountain 225 pixels down from the top edge */
+  top: 225px;
+}
+
+
+/* Creates the sun */
+.sun {
+  /* Sets the sun's width */
+  width: 200px;
+
+  /* Sets the sun's height */
+  height: 200px;
+
+  /* Gives the sun a solid yellow fill */
+  background-color: yellow;
+
+  /* Allows the sun to be positioned at exact coordinates */
+  position: absolute;
+
+  /* Makes a square into a circle:
+     50% border radius rounds all corners completely. */
+  border-radius: 50%;
+
+  /* Moves the sun upward, partly beyond the top of the viewport */
+  top: -75px;
+
+  /* Moves the sun to the right, partly beyond the right edge */
+  right: -75px;
+}
+
+
+/* Main wrapper containing every penguin part */
+.penguin {
+  /* Overall width of the penguin drawing area */
+  width: 300px;
+
+  /* Overall height of the penguin drawing area */
+  height: 300px;
+
+  /* Centers the penguin horizontally.
+     With a fixed width, margin: auto distributes empty space equally
+     on the left and right sides. */
+  margin: auto;
+
+  /* Adds 75 pixels of space above the penguin */
+  margin-top: 75px;
+
+  /* Places the penguin in front of mountains and ground */
+  z-index: 4;
+
+  /* Keeps the penguin in normal document flow while also acting as
+     the positioning reference for its absolutely positioned children. */
+  position: relative;
+
+  /* Animates changes to transform over 1 second.
+     ease-in-out starts slowly, speeds up, then slows down.
+     0ms means there is no delay before the transition begins. */
+  transition: transform 1s ease-in-out 0ms;
+}
+
+
+/* Selects every element inside .penguin.
+   The asterisk (*) is the universal selector. */
+.penguin * {
+  /* Makes all penguin pieces absolutely positioned.
+     This lets each face part, arm, eye, and foot be placed precisely
+     relative to its closest positioned ancestor. */
+  position: absolute;
+}
+
+
+/* Applies only while the user is actively clicking/touching the penguin */
+.penguin:active {
+  /* Enlarges the entire penguin to 150% of its normal size */
+  transform: scale(1.5);
+
+  /* Changes the pointer into a "not allowed" symbol while active */
+  cursor: not-allowed;
+}
+
+
+/* Creates the penguin's outer head shape */
+.penguin-head {
+  /* 50% of the .penguin container width:
+     50% of 300px = 150px */
+  width: 50%;
+
+  /* 45% of the .penguin container height:
+     45% of 300px = 135px */
+  height: 45%;
+
+  /* Diagonal gray-to-light gradient for the penguin's outer feathers.
+     var(--penguin-skin) retrieves the gray variable from :root. */
+  background: linear-gradient(
+    45deg,
+    var(--penguin-skin),
+    rgb(239, 240, 228)
+  );
+
+  /* Rounds the shape into a head-like oval.
+     The four values apply to:
+     top-left, top-right, bottom-right, bottom-left corners. */
+  border-radius: 70% 70% 65% 65%;
+
+  /* Positions the head 10% from the top of .penguin */
+  top: 10%;
+
+  /* Positions the head 25% from the left of .penguin */
+  left: 25%;
+
+  /* Makes the head layer appear above the body */
+  z-index: 1;
+}
+
+
+/* Shared styling for both white face sections */
+.face {
+  /* Each face side is 60% of the head width */
+  width: 60%;
+
+  /* Each face side is 70% of the head height */
+  height: 70%;
+
+  /* Uses the reusable white face-color variable */
+  background-color: var(--penguin-face);
+
+  /* Rounds each face piece into an oval */
+  border-radius: 70% 70% 60% 60%;
+
+  /* Places both face pieces 15% from the top of the head */
+  top: 15%;
+}
+
+
+/* Positions only the left face shape */
+.face.left {
+  /* Moves the left face piece 5% from the left edge of the head */
+  left: 5%;
+}
+
+
+/* Positions only the right face shape */
+.face.right {
+  /* Moves the right face piece 5% from the right edge of the head */
+  right: 5%;
+}
+
+
+/* Creates the white lower-face/chin section */
+.chin {
+  /* Uses 90% of the head width */
+  width: 90%;
+
+  /* Uses 70% of the head height */
+  height: 70%;
+
+  /* Uses the same reusable white face color */
+  background-color: var(--penguin-face);
+
+  /* Places the chin lower on the head */
+  top: 25%;
+
+  /* Centers it approximately within the head:
+     5% left + 90% width = 95%, leaving 5% on the right. */
+  left: 5%;
+
+  /* Gives the chin a broader, highly rounded lower edge */
+  border-radius: 70% 70% 100% 100%;
+}
+
+
+/* Shared styling for both eyes */
+.eye {
+  /* Each eye uses 15% of the head's width */
+  width: 15%;
+
+  /* Each eye uses 17% of the head's height */
+  height: 17%;
+
+  /* Makes the eyes black */
+  background-color: black;
+
+  /* Places both eyes around the middle-lower part of the head */
+  top: 45%;
+
+  /* Turns each eye shape into an oval/circle */
+  border-radius: 50%;
+}
+
+
+/* Positions the left eye */
+.eye.left {
+  /* Places the left eye 25% from the left side of the head */
+  left: 25%;
+}
+
+
+/* Positions the right eye */
+.eye.right {
+  /* Places the right eye 25% from the right side of the head */
+  right: 25%;
+}
+
+
+/* Creates the white overlay that looks like an eyelid */
+.eye-lid {
+  /* Makes the eyelid 150% as wide as its eye,
+     allowing it to extend beyond the black eye shape */
+  width: 150%;
+
+  /* Makes the eyelid the same height as its eye */
+  height: 100%;
+
+  /* Uses the face color, creating the effect of a partly closed eyelid */
+  background-color: var(--penguin-face);
+
+  /* Moves the eyelid downward within the eye */
+  top: 25%;
+
+  /* Shifts it left so it remains visually centered despite its larger width */
+  left: -23%;
+
+  /* Rounds the eyelid shape */
+  border-radius: 50%;
+}
+
+
+/* Shared styling for both pink cheek/blush circles */
+.blush {
+  /* Blush width relative to the head */
+  width: 15%;
+
+  /* Blush height relative to the head */
+  height: 10%;
+
+  /* Makes both cheek areas pink */
+  background-color: pink;
+
+  /* Positions the blushes below the eyes */
+  top: 65%;
+
+  /* Rounds each blush into an oval/circle */
+  border-radius: 50%;
+}
+
+
+/* Positions the left blush */
+.blush.left {
+  /* Places it 15% from the left edge of the head */
+  left: 15%;
+}
+
+
+/* Positions the right blush */
+.blush.right {
+  /* Places it 15% from the right edge of the head */
+  right: 15%;
+}
+
+
+/* Shared styling for both pieces of the beak */
+.beak {
+  /* Both beak pieces have a height equal to 10% of the head */
+  height: 10%;
+
+  /* Uses the orange beak/foot color variable */
+  background-color: var(--penguin-picorna);
+
+  /* Makes the pieces rounded */
+  border-radius: 50%;
+}
+
+
+/* Styles and positions the upper beak */
+.beak.top {
+  /* Upper beak width relative to the head */
+  width: 20%;
+
+  /* Vertical position within the head */
+  top: 60%;
+
+  /* Horizontal position within the head */
+  left: 40%;
+}
+
+
+/* Styles and positions the lower beak */
+.beak.bottom {
+  /* Lower beak is slightly narrower than the upper beak */
+  width: 16%;
+
+  /* Places this piece slightly below the upper beak */
+  top: 65%;
+
+  /* Centers it under the upper beak */
+  left: 42%;
+}
+
+
+/* Styles the text and overall placement of the penguin's shirt */
+.shirt {
+  /* Shorthand font declaration:
+     bold = font weight
+     25px = font size
+     Helvetica = preferred font
+     sans-serif = fallback font family */
+  font: bold 25px Helvetica, sans-serif;
+
+  /* Places the shirt 165px from the top of the .penguin container */
+  top: 165px;
+
+  /* Places the shirt 127.5px from the left of the .penguin container */
+  left: 127.5px;
+
+  /* Places the shirt in front of the body */
+  z-index: 1;
+
+  /* Sets the text color to dark gray */
+  color: #6a6969;
+}
+
+
+/* Selects the <div> inside .shirt—the one containing the purple heart emoji */
+.shirt div {
+  /* Returns the emoji to its normal/default font weight,
+     rather than making it bold like the “I CSS” text */
+  font-weight: initial;
+
+  /* Positions the heart relative to the shirt container */
+  top: 22.5px;
+
+  /* Positions the heart relative to the shirt container */
+  left: 12px;
+}
+
+
+/* Creates the penguin's main body */
+.penguin-body {
+  /* 53% of the main .penguin width */
+  width: 53%;
+
+  /* 45% of the main .penguin height */
+  height: 45%;
+
+  /* Creates a multi-stop diagonal gradient:
+     dark gray at 0%,
+     pale gray at 25%,
+     white at 67%.
+     This creates shading/highlight across the body. */
+  background: linear-gradient(
+    45deg,
+    rgb(134, 133, 133) 0%,
+    rgb(234, 231, 231) 25%,
+    white 67%
+  );
+
+  /* Creates a broad oval torso with a strongly rounded bottom */
+  border-radius: 80% 80% 100% 100%;
+
+  /* Positions the body 40% from the top of .penguin */
+  top: 40%;
+
+  /* Positions the body 23.5% from the left of .penguin */
+  left: 23.5%;
+}
+
+
+/* Creates an extra decorative shape before the body content.
+   ::before is a pseudo-element: it behaves like an additional generated
+   child inside .penguin-body, without requiring another HTML element. */
+.penguin-body::before {
+  /* Required to generate visible content for a ::before pseudo-element.
+     An empty string means it displays no text, only its styled shape. */
+  content: "";
+
+  /* Allows exact positioning inside .penguin-body */
+  position: absolute;
+
+  /* Width relative to the penguin body */
+  width: 50%;
+
+  /* Height relative to the penguin body */
+  height: 45%;
+
+  /* Uses the penguin's gray skin color */
+  background-color: var(--penguin-skin);
+
+  /* Positions this patch near the upper middle of the body */
+  top: 10%;
+  left: 25%;
+
+  /* Makes the upper corners square and lower corners very rounded.
+     This forms a gray curved chest/feather detail. */
+  border-radius: 0% 0% 100% 100%;
+
+  /* Makes this shape partially transparent.
+     70% opacity means it is 70% visible. */
+  opacity: 70%;
+}
+
+
+/* Shared styling for both penguin arms/flippers */
+.arm {
+  /* Arm width relative to .penguin-body */
+  width: 30%;
+
+  /* Arm height relative to .penguin-body */
+  height: 60%;
+
+  /* Creates gray shading on the flippers */
+  background: linear-gradient(
+    90deg,
+    var(--penguin-skin),
+    rgb(209, 210, 199)
+  );
+
+  /* Creates a curved flipper shape.
+     The final 120% makes one corner strongly rounded. */
+  border-radius: 30% 30% 30% 120%;
+
+  /* Places arms behind the body.
+     This works because they are children of .penguin-body. */
+  z-index: -1;
+}
+
+
+/* Positions and animates the left arm */
+.arm.left {
+  /* Places the arm 35% down within the body */
+  top: 35%;
+
+  /* Places it 5% from the body's left edge */
+  left: 5%;
+
+  /* Sets the point around which rotation occurs.
+     top left makes the arm rotate from its shoulder area. */
+  transform-origin: top left; 
+
+  /* Rotates the arm 130 degrees.
+     scaleX(-1) mirrors it horizontally so its curved shape faces correctly. */
+  transform: rotate(130deg) scaleX(-1);
+
+  /* Applies the "wave" animation:
+     3s = one cycle lasts 3 seconds
+     linear = constant animation speed
+     infinite = repeats forever
+     wave = uses the @keyframes wave rule below */
+  animation: 3s linear infinite wave;
+}
+
+
+/* Positions the right arm */
+.arm.right {
+  /* Places the right arm at the top of the body */
+  top: 0%;
+
+  /* Moves it slightly beyond the right edge of the body */
+  right: -5%;
+
+  /* Rotates the arm upward/outward */
+  transform: rotate(-45deg);
+}
+
+
+/* Defines the animation named "wave" */
+@keyframes wave {
+  /* At 10% of the animation, move the left arm into one wave position */
+  10% {
+    transform: rotate(110deg) scaleX(-1);
+  }
+
+  /* At 20%, return it to the original wider rotation */
+  20% {
+    transform: rotate(130deg) scaleX(-1);
+  }
+
+  /* At 30%, move it upward again */
+  30% {
+    transform: rotate(110deg) scaleX(-1);
+  }
+
+  /* At 40%, return it again.
+     From 40% to 100%, it remains in this position until the next loop. */
+  40% {
+    transform: rotate(130deg) scaleX(-1);
+  }
+}
+
+
+/* Shared styling for both feet */
+.foot {
+  /* Foot width relative to the penguin body */
+  width: 15%;
+
+  /* Foot height relative to the penguin body */
+  height: 30%;
+
+  /* Uses the same orange color as the beak */
+  background-color: var(--penguin-picorna);
+
+  /* Places feet near and slightly below the bottom of the body */
+  top: 85%;
+
+  /* Rounds each foot into an oval */
+  border-radius: 50%;
+
+  /* Places feet behind the body */
+  z-index: -1;
+}
+
+
+/* Positions and rotates the left foot */
+.foot.left {
+  /* Places the foot 25% from the body’s left side */
+  left: 25%;
+
+  /* Rotates it outward to the left */
+  transform: rotate(80deg);
+}
+
+
+/* Positions and rotates the right foot */
+.foot.right {
+  /* Places the foot 25% from the body’s right side */
+  right: 25%;
+
+  /* Rotates it outward to the right */
+  transform: rotate(-80deg);
+}
+
+
+/* Creates the ground/snow area */
+.ground {
+  /* vw means viewport width:
+     100vw makes the ground as wide as the browser window */
+  width: 100vw;
+
+  /* calc() performs a CSS calculation.
+     The ground fills the remaining screen height after subtracting 300px. */
+  height: calc(100vh - 300px);
+
+  /* Creates a horizontal blue-to-light-cyan ground gradient */
+  background: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
+
+  /* Places ground above mountains but behind the penguin */
+  z-index: 3;
+
+  /* Allows it to overlap and be positioned precisely in the scene */
+  position: absolute;
+
+  /* Pulls the ground upward by 58px.
+     This makes it overlap with the lower section of the scene. */
+  margin-top: -58px;
+}
