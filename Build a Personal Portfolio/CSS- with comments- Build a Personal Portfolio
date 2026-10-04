@@ -1,0 +1,266 @@
+/* Makes element width/height calculations more predictable */
+* {
+  box-sizing: border-box;
+}
+
+/* Removes default page spacing and enables smoother anchor-link scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global page styles */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #eaf3ff;
+  background-color: #0b1626;
+}
+
+/* 
+  Required fixed navigation bar.
+
+  position: fixed removes the navbar from normal document flow and keeps
+  it attached to the viewport rather than the page content.
+
+  top: 0 ensures it is always at the top of the viewport.
+*/
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  width: 100%;
+  min-height: 64px;
+  padding: 0 8%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+
+  background-color: rgba(11, 22, 38, 0.96);
+  border-bottom: 1px solid rgba(125, 211, 252, 0.35);
+}
+
+/* Navbar link styling */
+#navbar a {
+  color: #eaf3ff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Visual feedback when a user hovers over a navigation link */
+#navbar a:hover {
+  color: #7dd3fc;
+}
+
+/* 
+  Required welcome section.
+
+  min-height: 100vh makes this section at least the full height
+  of the browser viewport.
+*/
+#welcome-section {
+  min-height: 100vh;
+  padding: 96px 8% 48px;
+  display: flex;
+  align-items: center;
+
+  background:
+    radial-gradient(circle at 82% 15%, rgba(34, 211, 238, 0.25), transparent 25rem),
+    linear-gradient(135deg, #0b1626, #132b4f);
+}
+
+/* Limits line length, improving readability */
+.welcome-content {
+  max-width: 800px;
+}
+
+/* Small introductory label above the h1 */
+.eyebrow {
+  margin: 0 0 1rem;
+  color: #7dd3fc;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Main page heading */
+#welcome-section h1 {
+  max-width: 850px;
+  margin: 0;
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  line-height: 1.05;
+}
+
+/* Supporting text under the heading */
+.intro {
+  max-width: 680px;
+  margin: 1.5rem 0 2rem;
+  color: #c5d5e8;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+/* Reusable button-like link */
+.button {
+  display: inline-block;
+  padding: 0.9rem 1.2rem;
+  color: #07111e;
+  background-color: #7dd3fc;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+/* Button hover state */
+.button:hover {
+  background-color: #bae6fd;
+  transform: translateY(-2px);
+}
+
+/* Projects section */
+#project-section {
+  padding: 6rem 8%;
+  color: #172033;
+  background-color: #f4f8fc;
+
+  /* Ensures the fixed navbar does not cover the section heading after a link jump */
+  scroll-margin-top: 64px;
+}
+
+/* Shared heading style for lower sections */
+#project-section h2,
+#contact h2 {
+  margin-top: 0;
+  font-size: 2.25rem;
+}
+
+/* Introductory text in the Projects section */
+.section-description {
+  max-width: 700px;
+  margin-bottom: 2.5rem;
+  color: #526175;
+  line-height: 1.6;
+}
+
+/* Responsive grid for project tiles */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+/* 
+  Required project tile class.
+
+  Each article with this class represents one project.
+*/
+.project-tile {
+  min-height: 285px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+
+  background-color: #ffffff;
+  border: 1px solid #d8e2ee;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(20, 38, 63, 0.08);
+}
+
+/* Decorative emoji/icon for each project */
+.project-icon {
+  margin-bottom: 1rem;
+  font-size: 2.4rem;
+}
+
+/* Project-card title */
+.project-tile h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+/* Project-card description */
+.project-tile p {
+  color: #526175;
+  line-height: 1.6;
+}
+
+/* Links inside project tiles */
+.project-tile a {
+  margin-top: auto;
+  color: #075985;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* Project-link hover state */
+.project-tile a:hover {
+  color: #0e7490;
+  text-decoration: underline;
+}
+
+/* Contact section */
+#contact {
+  padding: 6rem 8%;
+  text-align: center;
+  background-color: #132b4f;
+  scroll-margin-top: 64px;
+}
+
+/* Contact text */
+#contact p {
+  color: #c5d5e8;
+  line-height: 1.6;
+}
+
+/* Required GitHub profile link */
+#profile-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.95rem 1.25rem;
+
+  color: #07111e;
+  background-color: #7dd3fc;
+  border-radius: 8px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* Hover state for GitHub profile link */
+#profile-link:hover {
+  background-color: #bae6fd;
+}
+
+/* Bottom page area */
+footer {
+  padding: 1.5rem 8%;
+  text-align: center;
+  color: #aebfd2;
+  background-color: #07111e;
+}
+
+/* 
+  Required media query.
+
+  This changes the multi-column project layout to one column on smaller screens.
+*/
+@media (max-width: 768px) {
+  /* Makes the project cards stack vertically on tablets and phones */
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Reduces nav spacing so links fit on narrower screens */
+  #navbar {
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  /* Makes the welcome section's spacing better suited to mobile screens */
+  #welcome-section {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
