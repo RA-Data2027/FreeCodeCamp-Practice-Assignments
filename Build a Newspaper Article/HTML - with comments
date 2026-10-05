@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Declares modern HTML5 document structure -->
+
+<html lang="en">
+  <!-- Identifies English as the primary language -->
+
+  <head>
+    <!-- Contains metadata and stylesheet linkage -->
+
+    <meta charset="UTF-8" />
+    <!-- Sets character encoding to standard UTF-8 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures proper scaling across mobile and desktop screens -->
+
+    <title>Newspaper Article</title>
+    <!-- Displays page title in browser tab -->
+
+    <!-- External stylesheet link -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Main wrapper element with class newspaper -->
+    <div class="newspaper">
+
+      <!-- Newspaper Title Header -->
+      <div class="name">The Daily Chronicle</div>
+
+      <!-- Publication Date -->
+      <div class="date">October 5, 2026</div>
+
+      <!-- Article Headline -->
+      <h1 class="headline">Breakthrough in Clean Fusion Energy Announced</h1>
+
+      <!-- Article Sub-Headline -->
+      <h2 class="sub-headline">Scientists achieve historic net energy gain in groundbreaking reactor trial</h2>
+
+      <!-- Article Author -->
+      <div class="author">By Eleanor Vance</div>
+
+      <!-- Article Paragraph 1 -->
+      <p class="text">
+        In a landmark development that promises to reshape the global energy landscape, researchers at the International Energy Institute have successfully demonstrated a self-sustaining fusion reaction yielding significantly more power than required to initiate it.
+      </p>
+
+      <!-- Article Paragraph 2 -->
+      <p class="text">
+        The breakthrough came following months of high-precision plasma confinement experiments. World leaders and environmental organizations have hailed the achievement as a pivotal step toward limitless, zero-carbon electricity for future generations.
+      </p>
+
+    </div>
+  </body>
+</html>
