@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Declares modern HTML5 document structure -->
+
+<html lang="en">
+  <!-- Identifies English as the primary language -->
+
+  <head>
+    <!-- Contains metadata and stylesheet linkage -->
+
+    <meta charset="UTF-8" />
+    <!-- Sets character encoding to standard UTF-8 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures proper scaling across mobile and desktop screens -->
+
+    <title>Confidential Email</title>
+    <!-- Displays page title in browser tab -->
+
+    <!-- External stylesheet link -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Main email container required with id="email" -->
+    <main id="email">
+
+      <!-- Stamp indicators -->
+      <div id="confidential">CONFIDENTIAL</div>
+      <div id="top-secret">TOP SECRET</div>
+
+      <!-- Classified Paragraph 1 -->
+      <p>
+        Subject: Operation Midnight Shield.<br />
+        Agent <span class="blurred">Johnathan Doe</span> was dispatched to location <span class="blurred">Sector 7G</span> at 0400 hours.
+      </p>
+
+      <!-- Classified Paragraph 2 -->
+      <p>
+        The objective of this briefing is to secure the primary asset regarding <span class="blurred">Project X-102</span>. Ensure all records are destroyed upon reading.
+      </p>
+
+      <!-- Classified Paragraph 3 -->
+      <p>
+        Contact the handler via frequency <span class="blurred">104.5 MHz</span> if complications arise during the recovery operation.
+      </p>
+
+    </main>
+  </body>
+</html>
