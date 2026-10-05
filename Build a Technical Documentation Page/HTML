@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Layout Field Guide</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <nav id="navbar" aria-label="Documentation navigation">
+      <header>CSS Layout Field Guide</header>
+      <a class="nav-link" href="#Getting_Started">Getting Started</a>
+      <a class="nav-link" href="#The_Box_Model">The Box Model</a>
+      <a class="nav-link" href="#Flexbox_Basics">Flexbox Basics</a>
+      <a class="nav-link" href="#Grid_Basics">Grid Basics</a>
+      <a class="nav-link" href="#Responsive_Layouts">Responsive Layouts</a>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="Getting_Started">
+        <header>Getting Started</header>
+        <p>CSS controls how HTML content appears on a page. A rule selects an element and assigns properties to it.</p>
+        <p>Start with a simple stylesheet linked from your HTML document. Then add rules for the elements you want to style.</p>
+        <pre><code>body {
+  font-family: Arial, sans-serif;
+}</code></pre>
+        <ul>
+          <li>Use selectors to choose elements.</li>
+          <li>Use properties to describe their appearance.</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="The_Box_Model">
+        <header>The Box Model</header>
+        <p>Every element occupies a box made up of content, padding, border, and margin. These layers affect the space around an element.</p>
+        <p>Setting <code>box-sizing: border-box;</code> makes the declared width include padding and borders, which often makes layouts easier to manage.</p>
+        <pre><code>* {
+  box-sizing: border-box;
+}</code></pre>
+        <ul>
+          <li>Padding creates space inside a border.</li>
+          <li>Margin creates space outside a border.</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Flexbox_Basics">
+        <header>Flexbox Basics</header>
+        <p>Flexbox arranges items along a main axis. It works well for navigation bars, rows of cards, and groups of controls.</p>
+        <p>Use <code>gap</code> to create consistent spacing between flex items without adding margins to each item.</p>
+        <pre><code>.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}</code></pre>
+        <ul>
+          <li><code>justify-content</code> distributes space along the main axis.</li>
+          <li><code>align-items</code> aligns items along the cross axis.</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Grid_Basics">
+        <header>Grid Basics</header>
+        <p>CSS Grid arranges content in rows and columns. It is useful when a design needs control in both directions.</p>
+        <p>The <code>repeat()</code> function can define multiple columns without writing the same track size repeatedly.</p>
+        <pre><code>.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}</code></pre>
+        <ul>
+          <li>Grid tracks are the rows and columns of a grid.</li>
+          <li>The <code>fr</code> unit represents a share of available space.</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Responsive_Layouts">
+        <header>Responsive Layouts</header>
+        <p>A responsive layout adapts to the space available. Flexible widths help content fit a range of screens.</p>
+        <p>Media queries let you change styles when a condition, such as the viewport width, is met.</p>
+        <pre><code>@media (max-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}</code></pre>
+        <ul>
+          <li>Test layouts at several viewport widths.</li>
+          <li>Choose breakpoints based on when the content needs to change.</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
