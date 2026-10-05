@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- Declares that this page uses modern HTML5 -->
+
+<html lang="en">
+  <!-- Starts the HTML document and sets English as the primary language -->
+
+  <head>
+    <!-- Contains metadata and configuration not displayed directly on the page -->
+
+    <title>Calculus Final Exams Table</title>
+    <!-- Text displayed in the browser tab -->
+
+    <meta charset="UTF-8" />
+    <!-- Sets character encoding to UTF-8 to display text and symbols correctly -->
+  </head>
+
+  <body>
+    <!-- Main visible content of the page -->
+
+    <!-- Table element used to display structured, tabular data -->
+    <table>
+
+      <!-- Provides an accessible title/heading for the entire table -->
+      <caption>
+        Calculus Final Exam Grades
+      </caption>
+
+      <!-- Groups the header row(s) of the table -->
+      <thead>     
+        <tr>
+          <!-- th tags represent header cells (bold and centered by default) -->
+          <th>Last Name</th>
+          <th>First Name</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+
+      <!-- Groups the primary data rows of the table -->
+      <tbody>
+        <tr>
+          <!-- td tags represent standard data cells -->
+          <td>Davis</td>
+          <td>Alex</td>
+          <td>54</td>
+        </tr>
+
+        <tr>
+          <td>Doe</td>
+          <td>Samantha</td>
+          <td>92</td>
+        </tr>
+
+        <tr>
+          <td>Rodriguez</td>
+          <td>Marcus</td>
+          <td>88</td>
+        </tr>
+
+        <tr>
+          <td>Thompson</td>
+          <td>Jane</td>
+          <td>77</td>
+        </tr>
+
+        <tr>
+          <td>Williams</td>
+          <td>Natalie</td>
+          <td>83</td>
+        </tr>
+      </tbody>
+
+      <!-- Groups the summary/footer row(s) of the table -->
+      <tfoot>
+        <tr>
+          <td>Average Grade</td>
+          <td>78.8</td>
+        </tr>
+      </tfoot>
+
+    </table>
+  </body>
+</html>
