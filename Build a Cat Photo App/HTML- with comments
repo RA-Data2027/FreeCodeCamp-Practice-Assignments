@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- Declares that this page uses modern HTML5 -->
+
+<html lang="en">
+  <!-- Starts the HTML document and identifies English as the page language -->
+
+  <head>
+    <!-- Contains setup information and metadata not displayed directly on the page -->
+
+    <title>CatPhotoApp</title>
+    <!-- Text displayed in the browser tab or window title -->
+  </head>
+
+  <body>
+    <!-- Contains all visible page content -->
+
+    <main>
+      <!-- Encapsulates the central, primary content unique to this webpage -->
+
+      <h1>CatPhotoApp</h1>
+      <!-- Main heading of the application -->
+
+      <!-- First section: Introductory cat photos and links -->
+      <section>
+        <h2>Cat Photos</h2>
+        <!-- Section heading for photo content -->
+
+        <p>
+          Everyone loves
+          <!-- Link to a direct image URL -->
+          <a href="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg">cute cats</a>
+          online!
+        </p>
+
+        <p>
+          See more
+          <!-- target="_blank" opens the destination link in a new browser tab -->
+          <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>
+          in our gallery.
+        </p>
+
+        <!-- Clickable image wrapped inside an anchor (link) tag -->
+        <a href="https://freecatphotoapp.com">
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+            alt="A cute orange cat lying on its back."
+          />
+        </a>
+      </section>
+
+      <!-- Second section: Lists and captioned media -->
+      <section>
+        <h2>Cat Lists</h2>
+
+        <h3>Things cats love:</h3>
+        <!-- Unordered list: renders items with bullet points -->
+        <ul>
+          <li>catnip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+
+        <!-- Self-contained content container pairing an image with a caption -->
+        <figure>
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg"
+            alt="A slice of lasagna on a plate."
+          />
+          <!-- Provides a visible caption for the figure; <em> adds emphasis -->
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>
+        </figure>
+
+        <h3>Top 3 things cats hate:</h3>
+        <!-- Ordered list: renders items as a numbered sequence -->
+        <ol>
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+
+        <figure>
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+            alt="Two tabby kittens sleeping together on a couch."
+          />
+          <!-- <strong> indicates strong importance/emphasis -->
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <!-- Page footer containing copyright and external credit links -->
+    <footer>
+      <p>
+        No Copyright -
+        <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+      </p>
+    </footer>
+  </body>
+</html>
