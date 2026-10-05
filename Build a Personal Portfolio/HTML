@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>RA Data | Portfolio</title>
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <a href="#welcome-section">About</a>
+      <a href="#project-section">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="welcome-section">
+      <div class="welcome-content">
+        <p class="eyebrow">Hello, I am</p>
+
+        <h1>RA — Data, Research, and Web Development</h1>
+
+        <p class="intro">
+          I build practical projects while developing skills in data,
+          computational science, and web development.
+        </p>
+
+        <a class="button" href="#project-section">Explore my projects</a>
+      </div>
+    </section>
+
+    <section id="project-section">
+      <h2>Selected Projects</h2>
+
+      <p class="section-description">
+        A growing collection of freeCodeCamp practice projects and web-development work.
+      </p>
+
+      <div class="project-grid">
+        <article class="project-tile">
+          <div class="project-icon" aria-hidden="true">🐧</div>
+
+          <h3>Build a Flappy Penguin</h3>
+
+          <p>
+            A CSS illustration using gradients, positioning, transforms,
+            pseudo-elements, and keyframe animation.
+          </p>
+
+          <a
+            href="https://github.com/RA-Data2027/FreeCodeCamp-Practice-Assignments"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View project repository →
+          </a>
+        </article>
+
+        <article class="project-tile">
+          <div class="project-icon" aria-hidden="true">🧪</div>
+
+          <h3>Data and Research Portfolio</h3>
+
+          <p>
+            Future projects connecting biological research, computation,
+            data analysis, and reproducible workflows.
+          </p>
+
+          <a href="#contact">Discuss this work →</a>
+        </article>
+
+        <article class="project-tile">
+          <div class="project-icon" aria-hidden="true">🌐</div>
+
+          <h3>Web Development Practice</h3>
+
+          <p>
+            Responsive HTML and CSS exercises focused on accessible,
+            organized, and user-friendly web interfaces.
+          </p>
+
+          <a href="#welcome-section">Back to introduction →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Connect</h2>
+
+      <p>
+        See my code and ongoing freeCodeCamp practice work on GitHub.
+      </p>
+
+      <a
+        id="profile-link"
+        href="https://github.com/RA-Data2027"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Visit my GitHub profile
+      </a>
+    </section>
+
+    <footer>
+      <p>Built as part of freeCodeCamp Responsive Web Design practice.</p>
+    </footer>
+  </body>
+</html>
