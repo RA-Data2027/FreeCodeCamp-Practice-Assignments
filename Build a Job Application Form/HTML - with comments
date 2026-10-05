@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- Declares modern HTML5 document structure -->
+
+<html lang="en">
+  <!-- Identifies English as the primary language -->
+
+  <head>
+    <!-- Contains metadata and stylesheet linkage -->
+
+    <meta charset="UTF-8" />
+    <!-- Sets character encoding to standard UTF-8 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures proper scaling across mobile and desktop screens -->
+
+    <title>Job Application Form</title>
+    <!-- Displays page title in browser tab -->
+
+    <!-- External stylesheet link -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Main container wrapper with class container -->
+    <div class="container">
+      <h1>Job Application Form</h1>
+
+      <!-- Main form element -->
+      <form>
+        <!-- Full Name Field -->
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <!-- Email Field -->
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+
+        <!-- Position Dropdown Select Field -->
+        <label for="position">Job Position</label>
+        <select id="position" name="position" required>
+          <option value="">Select a position...</option>
+          <option value="frontend">Frontend Developer</option>
+          <option value="backend">Backend Developer</option>
+          <option value="fullstack">Full Stack Developer</option>
+          <option value="designer">UI/UX Designer</option>
+        </select>
+
+        <!-- Availability Fieldset with class radio-group -->
+        <fieldset class="radio-group">
+          <legend>Availability</legend>
+
+          <input
+            type="radio"
+            id="full-time"
+            name="availability"
+            value="full-time"
+            required
+          />
+          <label for="full-time">Full-Time</label>
+
+          <input
+            type="radio"
+            id="part-time"
+            name="availability"
+            value="part-time"
+          />
+          <label for="part-time">Part-Time</label>
+
+          <input
+            type="radio"
+            id="contract"
+            name="availability"
+            value="contract"
+          />
+          <label for="contract">Contract</label>
+        </fieldset>
+
+        <!-- Message / Cover Letter Field -->
+        <label for="message">Cover Letter / Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Application</button>
+      </form>
+    </div>
+  </body>
+</html>
