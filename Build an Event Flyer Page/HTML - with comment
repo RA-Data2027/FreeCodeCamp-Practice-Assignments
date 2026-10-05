@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- Declares modern HTML5 document structure -->
+
+<html lang="en">
+  <!-- Identifies English as the primary language -->
+
+  <head>
+    <!-- Contains metadata and stylesheet linkage -->
+
+    <meta charset="UTF-8" />
+    <!-- Sets character encoding to standard UTF-8 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures proper scaling across mobile and desktop screens -->
+
+    <title>Annual Tech Conference 2026</title>
+    <!-- Displays page title in browser tab -->
+
+    <!-- External stylesheet link -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Header section with cover image and title in exact order -->
+    <header>
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/labs/event.jpg"
+        alt="Annual Tech Conference Banner"
+      />
+      <h1>Annual Tech Conference 2026</h1>
+    </header>
+
+    <!-- Visual divider between header and main content -->
+    <hr />
+
+    <!-- Main landmark containing event features -->
+    <main>
+      <!-- First event feature section -->
+      <section>
+        <h2>Keynote Speakers</h2>
+        <p>
+          Join industry leaders and visionaries as they share breakthroughs in artificial intelligence, web technology, and digital design.
+        </p>
+      </section>
+
+      <!-- Second event feature section -->
+      <section>
+        <h2>Interactive Workshops</h2>
+        <p>
+          Participate in hands-on coding sessions, collaborative design sprints, and network with tech enthusiasts from around the world.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
