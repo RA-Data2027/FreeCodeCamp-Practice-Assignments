@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- Declares modern HTML5 document structure -->
+
+<html lang="en">
+  <!-- Identifies English as the primary language -->
+
+  <head>
+    <!-- Contains metadata and stylesheet linkage -->
+
+    <meta charset="UTF-8" />
+    <!-- Sets character encoding to standard UTF-8 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures proper scaling on all devices -->
+
+    <title>Business Card</title>
+    <!-- Displays page title in browser tab -->
+
+    <!-- External stylesheet link required by user stories -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Main business card container -->
+    <div class="business-card">
+
+      <!-- Profile Image -->
+      <img
+        class="profile-image"
+        src="https://cdn.freecodecamp.org/curriculum/labs/flower.jpg"
+        alt="A vibrant yellow flower in full bloom"
+      />
+
+      <!-- Personal Info Paragraphs -->
+      <p class="full-name">Jane Doe</p>
+      <p class="designation">Software Engineer</p>
+      <p class="company">Tech Solutions Inc.</p>
+
+      <!-- First Divider -->
+      <hr />
+
+      <!-- Contact Info Paragraphs -->
+      <p>janedoe@example.com</p>
+      <p>+1 (555) 019-2834</p>
+
+      <!-- Portfolio Link -->
+      <a class="portfolio-link" href="https://example.com">Portfolio</a>
+
+      <!-- Second Divider -->
+      <hr />
+
+      <!-- Social Media Section -->
+      <div class="social-media">
+        <h2>Connect with me</h2>
+        <a href="https://twitter.com">Twitter</a>
+        <a href="https://linkedin.com">LinkedIn</a>
+        <a href="https://github.com">GitHub</a>
+      </div>
+
+    </div>
+  </body>
+</html>
