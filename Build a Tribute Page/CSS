@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 28px 16px;
+  background: #ede8df;
+  color: #292733;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.7;
+}
+
+#main {
+  max-width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fffdf9;
+  border: 1px solid #d9d0c5;
+  border-radius: 18px;
+  box-shadow: 0 16px 45px rgba(41, 39, 51, 0.1);
+}
+
+.page-header {
+  padding: 64px 24px 42px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #815660;
+  font-family: Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+#title {
+  margin: 12px 0 4px;
+  font-size: clamp(2.8rem, 8vw, 5rem);
+  line-height: 1.1;
+}
+
+.subtitle {
+  max-width: 540px;
+  margin: 16px auto 0;
+  color: #5f5963;
+  font-size: 1.1rem;
+}
+
+#img-div {
+  margin: 0 24px;
+  padding: 24px;
+  background: #f3eee7;
+  border-radius: 12px;
+  text-align: center;
+}
+
+#image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+#img-caption {
+  margin-top: 16px;
+  color: #5f5963;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+#tribute-info {
+  max-width: 710px;
+  margin: 0 auto;
+  padding: 48px 28px 68px;
+}
+
+#tribute-info h2 {
+  margin-top: 0;
+  color: #604151;
+  font-size: 2rem;
+}
+
+#tribute-info p {
+  margin-bottom: 1.4rem;
+}
+
+blockquote {
+  margin: 40px 0;
+  padding: 18px 24px;
+  border-left: 4px solid #a56d77;
+  background: #f8f3ee;
+  font-size: 1.15rem;
+  font-style: italic;
+}
+
+blockquote p {
+  margin-top: 0;
+}
+
+blockquote cite {
+  color: #5f5963;
+  font-size: 0.9rem;
+}
+
+.learn-more {
+  padding-top: 12px;
+  border-top: 1px solid #ded6cd;
+}
+
+a {
+  color: #785064;
+  font-weight: bold;
+}
+
+a:hover,
+a:focus-visible {
+  color: #493042;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0;
+  }
+
+  #main {
+    border-radius: 0;
+  }
+
+  .page-header {
+    padding-top: 48px;
+  }
+
+  #img-div {
+    margin: 0 12px;
+    padding: 12px;
+  }
+
+  #tribute-info {
+    padding: 36px 22px 48px;
+  }
+}
