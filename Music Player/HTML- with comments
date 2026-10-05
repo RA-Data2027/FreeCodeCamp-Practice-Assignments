@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- Declares that this page uses modern HTML5 -->
+
+<html lang="en">
+  <!-- Starts the HTML document and identifies English as the primary language -->
+
+  <head>
+    <!-- Contains setup metadata not directly visible on the page -->
+
+    <meta charset="UTF-8">
+    <!-- Sets character encoding to UTF-8 to support standard characters and symbols -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures proper scaling and responsive layout on mobile devices -->
+
+    <title>Working with the HTML Audio Element</title>
+    <!-- Text displayed in the browser tab -->
+  </head>
+
+  <body>
+    <!-- Main visible content of the page -->
+
+    <h1>freeCodeCamp Tunes</h1>
+    <!-- Main page heading -->
+
+    <!-- First track entry -->
+    <h2>Can't Stay Down</h2>
+    <p>Artist: Quincy Larson</p>
+    
+    <!-- 
+      Embedded audio player:
+      - src: Specifies the path to the MP3 audio file
+      - loop: Automatically restarts playback when finished
+      - controls: Displays native browser playback UI (play/pause, volume, seek bar)
+    -->
+    <audio src="https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3" loop controls></audio>
+
+    <!-- Second track entry -->
+    <h2>Cruising for a Musing</h2>
+    <p>Artist: Quincy Larson</p>
+
+    <audio src="https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3" loop controls></audio>
+
+  </body>
+</html>
