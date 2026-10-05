@@ -1,0 +1,75 @@
+/* Page background and typography setup */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Form container styling with required properties */
+.form-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Form heading styling */
+.form-container h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #1a252c;
+  text-align: center;
+}
+
+/* Label styling with required margin and font color */
+label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #333333;
+  font-weight: bold;
+}
+
+/* Input elements styling with required width, padding, and bottom margin */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Textarea element styling with required width, padding, and bottom margin */
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Button styling with required background color and font size */
+button {
+  background-color: #007acc;
+  font-size: 16px;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Button hover effect changing the background color */
+button:hover {
+  background-color: #005999;
+}
