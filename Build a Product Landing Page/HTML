@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom | A Little Green for Your Desk</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <header id="header">
+      <a class="brand" href="#home" aria-label="Bloom home">
+        <img
+          id="header-img"
+          src="https://placehold.co/160x56/244b3b/ffffff.png?text=BLOOM"
+          alt="Bloom logo"
+        >
+      </a>
+
+      <nav id="nav-bar" aria-label="Main navigation">
+        <a class="nav-link" href="#features">Features</a>
+        <a class="nav-link" href="#see-it-grow">See it grow</a>
+        <a class="nav-link" href="#get-started">Get started</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">A brighter space starts small</p>
+          <h1>Make room to grow.</h1>
+          <p>
+            Meet Bloom, a simple desk planter designed to bring a little
+            greenery into your everyday routine.
+          </p>
+          <a class="button" href="#get-started">Explore Bloom</a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="leaf leaf-left"></div>
+          <div class="leaf leaf-right"></div>
+          <div class="stem"></div>
+          <div class="pot"></div>
+        </div>
+      </section>
+
+      <section id="features" class="section-block">
+        <p class="eyebrow">Thoughtfully simple</p>
+        <h2>Designed for your day</h2>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-number">01</span>
+            <h3>Small footprint</h3>
+            <p>A compact shape leaves plenty of room for your work.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-number">02</span>
+            <h3>Easy to style</h3>
+            <p>Soft colors and clean lines fit naturally into your space.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-number">03</span>
+            <h3>A daily pause</h3>
+            <p>Take a moment to step back and enjoy something growing.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="see-it-grow" class="section-block video-section">
+        <p class="eyebrow">A moment of nature</p>
+        <h2>See it grow</h2>
+        <p>Picture a small, colorful addition to your desk.</p>
+        <video
+          id="video"
+          src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+          controls
+          playsinline
+          aria-label="Video of a flower"
+        >
+          Your browser does not support the video element.
+        </video>
+      </section>
+
+      <section id="get-started" class="section-block signup-section">
+        <p class="eyebrow">Stay in the loop</p>
+        <h2>Bring a little Bloom to your inbox.</h2>
+        <p>Enter your email to hear about Bloom.</p>
+        <form
+          id="form"
+          action="https://www.freecodecamp.org/email-submit"
+          method="get"
+        >
+          <label for="email">Email address</label>
+          <div class="form-row">
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              required
+            >
+            <input id="submit" type="submit" value="Sign me up">
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>Bloom — make room to grow.</p>
+    </footer>
+  </body>
+</html>
