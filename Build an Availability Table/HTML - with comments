@@ -3,81 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Base Webpage</title>
-  <!-- Link to external CSS stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <title>Weekly Meeting Availability Schedule</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <main>
+    <table>
+      <caption>Weekly Meeting Availability Schedule</caption>
+      <thead>
+        <tr>
+          <th scope="col">Time</th>
+          <th scope="col">Monday</th>
+          <th scope="col">Tuesday</th>
+          <th scope="col">Wednesday</th>
+          <th scope="col">Thursday</th>
+          <th scope="col">Friday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="sharp">
+          <th scope="row" class="time">9:00 AM</th>
+          <td class="available-0" aria-label="0 available"></td>
+          <td class="available-1" aria-label="1 available"></td>
+          <td class="available-3" aria-label="3 available"></td>
+          <td class="available-5" aria-label="5+ available"></td>
+          <td class="available-2" aria-label="2 available"></td>
+        </tr>
+        <tr class="half">
+          <th scope="row" class="time">9:30 AM</th>
+          <td class="available-1" aria-label="1 available"></td>
+          <td class="available-2" aria-label="2 available"></td>
+          <td class="available-4" aria-label="4 available"></td>
+          <td class="available-5" aria-label="5+ available"></td>
+          <td class="available-3" aria-label="3 available"></td>
+        </tr>
+        <tr class="sharp">
+          <th scope="row" class="time">10:00 AM</th>
+          <td class="available-2" aria-label="2 available"></td>
+          <td class="available-4" aria-label="4 available"></td>
+          <td class="available-5" aria-label="5+ available"></td>
+          <td class="available-1" aria-label="1 available"></td>
+          <td class="available-0" aria-label="0 available"></td>
+        </tr>
+        <tr class="half">
+          <th scope="row" class="time">10:30 AM</th>
+          <td class="available-3" aria-label="3 available"></td>
+          <td class="available-5" aria-label="5+ available"></td>
+          <td class="available-2" aria-label="2 available"></td>
+          <td class="available-0" aria-label="0 available"></td>
+          <td class="available-4" aria-label="4 available"></td>
+        </tr>
+      </tbody>
+    </table>
 
-  <!-- Main header containing navigation -->
-  <header class="site-header">
-    <div class="container">
-      <h1 class="logo">My Brand</h1>
-      
-      <!-- Primary site navigation -->
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <div id="legend">
+      <span>Availability</span>
+      <div id="legend-gradient"></div>
     </div>
-  </header>
-
-  <!-- Hero section for main call-to-action -->
-  <section class="hero">
-    <div class="container">
-      <h2>Welcome to Our Site</h2>
-      <p>A simple, modern layout template ready for your content.</p>
-      <a href="#contact" class="btn">Get Started</a>
-    </div>
-  </section>
-
-  <!-- Main content area -->
-  <main class="main-content container">
-
-    <!-- About Section -->
-    <section id="about" class="section">
-      <h2>About Us</h2>
-      <p>This is where you describe your background, mission, or values.</p>
-    </section>
-
-    <!-- Cards Grid Section -->
-    <section id="services" class="section">
-      <h2>Our Services</h2>
-      <div class="card-grid">
-        
-        <!-- Individual Card 1 -->
-        <article class="card">
-          <h3>Web Design</h3>
-          <p>Clean, responsive interface designs tailored to your audience.</p>
-        </article>
-
-        <!-- Individual Card 2 -->
-        <article class="card">
-          <h3>Development</h3>
-          <p>Fast, reliable code built using modern web standards.</p>
-        </article>
-
-        <!-- Individual Card 3 -->
-        <article class="card">
-          <h3>SEO Optimization</h3>
-          <p>Strategies to improve visibility and increase search rankings.</p>
-        </article>
-
-      </div>
-    </section>
-
   </main>
-
-  <!-- Global page footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 My Brand. All rights reserved.</p>
-    </div>
-  </footer>
-
 </body>
 </html>
