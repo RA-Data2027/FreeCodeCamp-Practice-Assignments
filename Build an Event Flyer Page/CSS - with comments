@@ -1,0 +1,30 @@
+/* Body styles fulfilling margin, padding, width, and min-height requirements */
+body {
+  padding: 50px 0;
+  margin: 0 auto;
+  width: 80vw;
+  min-height: calc(100vh - 100px);
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333333;
+}
+
+/* Header image styling to scale cleanly within container */
+header img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Horizontal rule with percentage width requirement */
+hr {
+  width: 100%;
+  margin: 20px 0;
+  border: 1px solid #cccccc;
+}
+
+/* Section styling with percentage width requirement */
+section {
+  width: 100%;
+  margin-bottom: 25px;
+}
