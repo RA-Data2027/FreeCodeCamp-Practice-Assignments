@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- Declares modern HTML5 document structure -->
+
+<html lang="en">
+  <!-- Identifies English as the primary language -->
+
+  <head>
+    <!-- Contains metadata and configuration not displayed directly on the page -->
+
+    <meta charset="UTF-8" />
+    <!-- Sets character encoding to standard UTF-8 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures proper scaling across mobile and desktop screens -->
+
+    <title>Rise Beyond - Movie Review</title>
+    <!-- Displays page title in browser tab -->
+  </head>
+
+  <body>
+    <!-- Main landmark container required for primary content -->
+    <main>
+
+      <!-- Movie Title -->
+      <h1>Rise Beyond</h1>
+
+      <!-- Movie Cover Image with descriptive alt text -->
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/labs/rise-beyond-2.png"
+        alt="Movie poster for Rise Beyond showing an astronaut standing on a distant planet."
+      />
+
+      <!-- Paragraph 1: Brief Movie Description -->
+      <p>
+        An inspiring sci-fi drama following a group of brave astronauts on an extraordinary mission across uncharted galaxies to ensure humanity's future survival.
+      </p>
+
+      <!-- Paragraph 2: Movie Rating Section -->
+      <p>
+        <!-- Required bold label -->
+        <b>Movie Rating:</b>
+
+        <!-- Visual rating display hidden from screen readers to prevent repetitive reading -->
+        <span aria-hidden="true">⭐⭐⭐⭐⭐⭐⭐⭐⭐☆</span>
+
+        <!-- Numerical rating representation -->
+        (9.0/10)
+      </p>
+
+      <!-- Cast Members Heading -->
+      <h2>Cast Members</h2>
+
+      <!-- Unordered List for Cast Members -->
+      <ul>
+        <!-- Cast Member Item 1 -->
+        <li>
+          <b>James Holloway</b> as Ethan Carter
+        </li>
+
+        <!-- Cast Member Item 2 -->
+        <li>
+          <b>Elena Rostova</b> as Dr. Maya Lin
+        </li>
+
+        <!-- Cast Member Item 3 -->
+        <li>
+          <b>Marcus Vance</b> as Commander Vance
+        </li>
+      </ul>
+
+    </main>
+  </body>
+</html>
