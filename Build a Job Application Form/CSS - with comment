@@ -1,0 +1,107 @@
+/* Body and Container styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f6;
+  padding: 20px;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* General form element layouts */
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Fieldset styling */
+fieldset.radio-group {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+fieldset.radio-group label {
+  display: inline-block;
+  margin-right: 15px;
+  margin-top: 0;
+  font-weight: normal;
+}
+
+/* 20. Style the first input field differently using :first-of-type */
+input:first-of-type {
+  border-radius: 8px;
+}
+
+/* 11 & 12. Focus state for input and textarea (Exact selector order required: input, textarea) */
+input:focus,
+textarea:focus {
+  border-color: #0056b3;
+  outline: none;
+}
+
+/* 13. Invalid pseudo-class (Exact selector list order required: input, select, textarea) */
+input:invalid,
+select:invalid,
+textarea:invalid {
+  border-color: red;
+}
+
+/* 14. Valid pseudo-class (Exact selector list order required: input, select, textarea) */
+input:valid,
+select:valid,
+textarea:valid {
+  border-color: green;
+}
+
+/* 16, 17, 18. Styling checked radio button inputs */
+.radio-group input[type="radio"]:checked {
+  border-color: #0056b3;
+  background-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+}
+
+/* 19. Change text color of the associated label when radio button is selected */
+input[type="radio"]:checked + label {
+  color: #0056b3;
+  font-weight: bold;
+}
+
+/* Submit button base styling */
+button[type="submit"] {
+  background-color: #0056b3;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 100%;
+}
+
+/* 15. Button hover effect */
+button:hover {
+  background-color: #003d80;
+}
