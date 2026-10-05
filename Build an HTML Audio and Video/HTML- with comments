@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- Declares that this page uses modern HTML5 -->
+
+<html lang="en">
+  <!-- Starts the HTML document and identifies English as the primary language -->
+
+  <head>
+    <!-- Contains metadata and configuration not displayed directly on the page -->
+
+    <meta charset="UTF-8">
+    <!-- Sets character encoding to UTF-8 to display text and symbols correctly -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures proper scaling and responsive layout across mobile and desktop screens -->
+
+    <title>Media Player</title>
+    <!-- Text displayed in the browser tab -->
+  </head>
+
+  <body>
+    <!-- Main visible content of the page -->
+
+    <!-- Single required h1 element for the main title of the page -->
+    <h1>Media Player</h1>
+
+    <!-- First section: Video player and title -->
+    <section>
+      <!-- Title of the video playing -->
+      <h2>What is the .map() Method?</h2>
+
+      <!-- 
+        Video player element:
+        - width="640": Sets display width to 640 pixels
+        - controls: Enables native playback UI (play/pause, volume, seek bar)
+      -->
+      <video width="640" controls>
+        <!-- 
+          Media source definition:
+          - src: Direct URL link to the video file (.mp4)
+          - type: MIME type matching the video file extension (video/mp4)
+        -->
+        <source 
+          src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4" 
+          type="video/mp4"
+        >
+      </video>
+    </section>
+
+    <!-- Second section: Audio player and title -->
+    <section>
+      <!-- Title of the song playing -->
+      <h2>Sailing Away</h2>
+
+      <!-- 
+        Audio player element:
+        - controls: Displays native browser playback controls
+        - loop: Automatically restarts playback when finished
+        - src: Direct URL link to the MP3 audio file
+      -->
+      <audio controls loop src="https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3"></audio>
+    </section>
+
+  </body>
+</html>
