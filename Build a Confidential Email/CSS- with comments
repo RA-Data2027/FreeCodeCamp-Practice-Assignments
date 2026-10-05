@@ -1,0 +1,52 @@
+/* Body layout setup */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* 1-6. #email selector requirements */
+#email {
+  padding: 50px;
+  margin-top: 50px;
+  width: 500px;
+  border: 2px solid #333333;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+/* 7-16, 19. #confidential stamp styling */
+#confidential {
+  display: inline-block;
+  padding: 10px;
+  margin-left: 10px;
+  border: 2px solid #cc0000;
+  color: #cc0000;
+  font-weight: bold;
+  transform: rotate(-10deg);
+}
+
+/* 8-16, 20. #top-secret stamp styling */
+#top-secret {
+  display: inline-block;
+  padding: 10px;
+  margin-left: 15px;
+  border: 2px solid #0066cc;
+  color: #0066cc;
+  font-weight: bold;
+  transform: rotate(8deg);
+}
+
+/* Paragraph spacing */
+p {
+  margin-top: 25px;
+  line-height: 1.6;
+  color: #222222;
+}
+
+/* 22-24. .blurred selector requirement */
+.blurred {
+  filter: blur(3px);
+}
