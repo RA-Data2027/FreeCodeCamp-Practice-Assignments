@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- Declares that this page uses modern HTML5 -->
+
+<html lang="en">
+  <!-- Starts the HTML document and sets English as the primary language -->
+
+  <head>
+    <!-- Contains metadata and configuration not displayed directly on the page -->
+
+    <meta charset="UTF-8">
+    <!-- Sets character encoding to UTF-8 to display text and symbols correctly -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures proper scaling and responsive layout across mobile and desktop screens -->
+
+    <title>Working with the HTML Video Element</title>
+    <!-- Text displayed in the browser tab -->
+  </head>
+
+  <body>
+    <!-- Main visible content of the page -->
+
+    <h1>Working with the HTML Video Element</h1>
+    <!-- Main page title -->
+
+    <!-- 
+      Embedded video player:
+      - width="640": Sets the display width of the player in pixels
+      - loop: Automatically restarts video playback when finished
+      - controls: Displays native browser playback controls (play/pause, volume, seek bar)
+      - muted: Mutes audio by default (required by most browsers for autoplay/smooth loading)
+      - poster: Specifies an image thumbnail to display before the video plays
+    -->
+    <video
+      width="640"
+      loop
+      controls
+      muted
+      poster="https://cdn.freecodecamp.org/curriculum/labs/past-event2.jpg"
+    >
+      <!-- Primary video file (MP4 - widely supported) -->
+      <source
+        src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4"
+        type="video/mp4"
+      >
+
+      <!-- Fallback video format (WebM - highly efficient for modern web browsers) -->
+      <source
+        src="https://cdn.freecodecamp.org/curriculum/labs/mapmethod.webm"
+        type="video/webm"
+      >
+
+      <!-- Fallback video format (Ogg - open-container format for broader compatibility) -->
+      <source
+        src="https://cdn.freecodecamp.org/curriculum/labs/mapmethod.ogg"
+        type="video/ogg"
+      >
+      
+    </video>
+  </body>
+</html>
