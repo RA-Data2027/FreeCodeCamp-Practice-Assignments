@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- Declares modern HTML5 document structure -->
+
+<html lang="en">
+  <!-- Identifies English as the primary language -->
+
+  <head>
+    <!-- Contains metadata and stylesheet linkage -->
+
+    <meta charset="UTF-8" />
+    <!-- Sets character encoding to standard UTF-8 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures proper scaling across mobile and desktop screens -->
+
+    <title>Pricing Plans</title>
+    <!-- Displays page title in browser tab -->
+
+    <!-- External stylesheet link -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Main page heading -->
+    <h1>Pricing Plans</h1>
+
+    <!-- Flexbox container holding the pricing cards -->
+    <div class="pricing-container">
+      
+      <!-- Basic Plan Card -->
+      <div class="pricing-card basic-plan">
+        <h2>Basic</h2>
+        <p>$9/month</p>
+      </div>
+
+      <!-- Pro Plan Card -->
+      <div class="pricing-card pro-plan">
+        <h2>Pro</h2>
+        <p>$19/month</p>
+      </div>
+
+      <!-- Premium Plan Card -->
+      <div class="pricing-card premium-plan">
+        <h2>Premium</h2>
+        <p>$29/month</p>
+      </div>
+
+    </div>
+  </body>
+</html>
