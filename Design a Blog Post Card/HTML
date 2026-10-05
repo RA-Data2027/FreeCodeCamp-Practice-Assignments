@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Declares modern HTML5 document structure -->
+
+<html lang="en">
+  <!-- Identifies English as the primary language -->
+
+  <head>
+    <!-- Contains metadata and stylesheet linkage -->
+
+    <meta charset="UTF-8" />
+    <!-- Sets character encoding to standard UTF-8 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures proper scaling across mobile and desktop screens -->
+
+    <title>Blog Post Card</title>
+    <!-- Displays page title in browser tab -->
+
+    <!-- External stylesheet link -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Main blog post card container -->
+    <div class="blog-post-card">
+
+      <!-- Cover image with class, valid src, and descriptive alt text -->
+      <img
+        class="post-img"
+        src="https://cdn.freecodecamp.org/curriculum/labs/cover-photo.jpg"
+        alt="A scenic mountain landscape during sunset"
+      />
+
+      <!-- Content wrapper container -->
+      <div class="post-content">
+
+        <!-- Title of the blog post -->
+        <h2 class="post-title">Exploring the Wilderness</h2>
+
+        <!-- Summary excerpt of the blog post -->
+        <p class="post-excerpt">
+          Discover the beauty of remote mountain trails and learn practical tips for your next outdoor adventure in nature.
+        </p>
+
+        <!-- Read more button link -->
+        <a class="read-more" href="#">Read More</a>
+
+      </div>
+
+    </div>
+  </body>
+</html>
