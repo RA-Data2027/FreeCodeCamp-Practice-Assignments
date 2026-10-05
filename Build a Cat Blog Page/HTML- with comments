@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- Declares that this page uses modern HTML5 -->
+
+<html lang="en">
+  <!-- Starts the HTML document and identifies English as the primary language -->
+
+  <head>
+    <!-- Contains metadata and configuration not displayed directly on the page -->
+
+    <title>Mr. Whiskers' Blog</title>
+    <!-- Text displayed in the browser tab -->
+
+    <meta charset="UTF-8" />
+    <!-- Sets character encoding to UTF-8 to display standard characters and symbols correctly -->
+  </head>
+
+  <body>
+    <!-- Contains all visible page content -->
+
+    <!-- Header section containing the top-level branding, featured visual, and navigation -->
+    <header>
+      <h1>Welcome to Mr. Whiskers' Blog Page!</h1>
+      <!-- Main title of the blog -->
+
+      <!-- Self-contained visual element pairing an image with a caption -->
+      <figure>
+        <img
+          src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg"
+          alt="a cat in the garden"
+        />
+        <figcaption>Mr. Whiskers in the Garden</figcaption>
+      </figure>
+
+      <!-- Site navigation containing links to different page sections -->
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#posts">Posts</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Encloses the core content unique to this page -->
+    <main>
+      <!-- About section introducing the author -->
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          Hi there! I'm Jane Doe, a passionate writer who finds endless inspiration in the antics of my beloved cat, Mr. Whiskers.
+        </p>
+        <p>
+          His playful nature and boundless energy keep me on my toes. I love him so much.
+        </p>
+      </section>
+
+      <!-- Posts section listing blog entries -->
+      <section id="posts">
+        <h2>Posts</h2>
+
+        <!-- Individual blog post article -->
+        <article>
+          <h3>Mr. Whiskers' First Day Home</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            quod, voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
+            quidem voluptatum quas. Quisquam quod, voluptates, quae, quos
+            quibusdam dolorum quia nemo repudiandae quidem voluptatum quas.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            quod, voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
+            quidem voluptatum quas. Quisquam quod, voluptates, quae, quos
+            quibusdam dolorum quia nemo repudiandae quidem voluptatum quas.
+          </p>
+        </article>
+
+        <!-- Individual blog post article -->
+        <article>
+          <h3>Mr. Whiskers' First Bath</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            quod, voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
+            quidem voluptatum quas. Quisquam quod, voluptates, quae, quos
+            quibusdam dolorum quia nemo repudiandae quidem voluptatum quas.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            quod, voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
+            quidem voluptatum quas. Quisquam quod, voluptates, quae, quos
+            quibusdam dolorum quia nemo repudiandae quidem voluptatum quas.
+          </p>
+        </article>
+
+        <!-- Individual blog post article -->
+        <article>
+          <h3>Mr. Whiskers' First Birthday Party</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            quod, voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
+            quidem voluptatum quas. Quisquam quod, voluptates, quae, quos
+            quibusdam dolorum quia nemo repudiandae quidem voluptatum quas.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            quod, voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
+            quidem voluptatum quas. Quisquam quod, voluptates, quae, quos
+            quibusdam dolorum quia nemo repudiandae quidem voluptatum quas.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <!-- Page footer containing contact information -->
+    <footer>
+      <section id="contact">
+        <h2>Contact</h2>
+
+        <!-- Address element specifying contact details -->
+        <address>
+          <!-- tel: protocol allows mobile devices to dial directly -->
+          <p>Phone: <a href="tel:5555555555">555-555-5555</a></p>
+          <p>Email: fake@email.com</p>
+        </address>
+      </section>
+    </footer>
+  </body>
+</html>
