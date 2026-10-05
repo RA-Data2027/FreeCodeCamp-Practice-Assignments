@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- Declares modern HTML5 document structure -->
+
+<html lang="en">
+  <!-- Identifies English as the primary language of the document -->
+
+  <head>
+    <!-- Contains page configuration metadata -->
+
+    <meta charset="UTF-8">
+    <!-- Sets character encoding to standard UTF-8 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures full responsiveness on screens of all sizes -->
+
+    <title>Checkout Page</title>
+    <!-- Displays page title in browser tab -->
+  </head>
+
+  <body>
+    <!-- Main visible content container -->
+
+    <!-- Single required h1 main title -->
+    <h1>Checkout</h1>
+
+    <!-- First section: Cart preview with item image -->
+    <section>
+      <!-- Required h2 heading for first section -->
+      <h2>Your Cart</h2>
+
+      <!-- Product image with descriptive alt text -->
+      <img 
+        src="https://cdn.freecodecamp.org/curriculum/labs/cube.jpg" 
+        alt="A colorful puzzle cube product"
+      >
+    </section>
+
+    <!-- Second section: Payment information and form -->
+    <section>
+      <!-- Required h2 heading for second section -->
+      <h2>Payment Information</h2>
+
+      <!-- Form container for payment details -->
+      <form>
+
+        <!-- Cardholder Name field (Required input 1) -->
+        <label for="card-name">
+          Name on Card <span aria-hidden="true">*</span>
+        </label>
+        <input 
+          type="text" 
+          id="card-name" 
+          name="card-name" 
+          required
+        >
+
+        <!-- Card Number field (Required input 2) -->
+        <label for="card-number">
+          Card Number <span aria-hidden="true">*</span>
+        </label>
+        <input 
+          type="text" 
+          id="card-number" 
+          name="card-number" 
+          aria-describedby="card-number-help"
+          required
+        >
+
+        <!-- Required help text placed immediately after card number input -->
+        <p id="card-number-help">
+          Please enter a 16-digit card number without spaces or dashes (e.g., 1234567890123456).
+        </p>
+
+        <!-- Form submission button -->
+        <button type="submit">Complete Purchase</button>
+
+      </form>
+    </section>
+
+  </body>
+</html>
