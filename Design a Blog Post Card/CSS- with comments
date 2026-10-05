@@ -1,0 +1,54 @@
+/* Page background set to a non-white color */
+body {
+  background-color: #f0f4f8;
+  font-family: Arial, sans-serif;
+}
+
+/* Main card wrapper styling */
+.blog-post-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  width: 350px;
+  text-align: center;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+/* Image styled to fill card width with a bottom border */
+.post-img {
+  width: 100%;
+  border-bottom: 3px solid #007acc;
+}
+
+/* Content padding inside the card */
+.post-content {
+  padding: 20px;
+}
+
+/* Post title styling: custom text color and margins on all sides */
+.post-title {
+  color: #1a252c;
+  margin: 10px;
+}
+
+/* Post excerpt styling: custom text color and margins on all sides */
+.post-excerpt {
+  color: #556068;
+  margin: 15px;
+}
+
+/* Button link styling with required properties */
+.read-more {
+  display: inline-block;
+  color: #ffffff;
+  background-color: #007acc;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* Hover state effect that changes the background color */
+.read-more:hover {
+  background-color: #005999;
+}
