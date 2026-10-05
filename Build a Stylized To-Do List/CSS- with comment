@@ -1,0 +1,29 @@
+/* Base link styles: removes underlines from all anchor elements */
+a {
+  text-decoration: none;
+}
+
+/* Default unvisited link state color */
+a:link {
+  color: #0066cc;
+}
+
+/* Visited link state color */
+a:visited {
+  color: #663399;
+}
+
+/* Hover state color */
+a:hover {
+  color: #e60000;
+}
+
+/* Active state color (when link is being clicked) */
+a:active {
+  color: #008000;
+}
+
+/* Focus state: adds a colored outline around the focused link */
+a:focus {
+  outline: 2px solid #ffaa00;
+}
