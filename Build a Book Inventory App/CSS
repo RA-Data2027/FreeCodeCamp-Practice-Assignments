@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 20px;
+  background: #f1f5f9;
+  color: #193047;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 24px;
+  color: #183153;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th,
+td {
+  padding: 16px;
+  border-bottom: 1px solid #d9e4ed;
+  text-align: left;
+}
+
+th {
+  background: #183153;
+  color: white;
+}
+
+tr[class="read"] {
+  background-image: linear-gradient(90deg, #e3f5ed, #ffffff);
+}
+
+tr[class="to-read"] {
+  background-image: linear-gradient(90deg, #fff1d9, #ffffff);
+}
+
+tr[class="in-progress"] {
+  background-image: linear-gradient(90deg, #e5edff, #ffffff);
+}
+
+span {
+  display: inline-block;
+}
+
+tr[class="to-read"] span[class="status"] {
+  border: 1px solid #c98c27;
+  background-image: linear-gradient(#fff3d6, #ffe1a5);
+}
+
+tr[class="read"] span[class="status"] {
+  border: 1px solid #278565;
+  background-image: linear-gradient(#e3f8ea, #bce8d1);
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: 1px solid #5575ba;
+  background-image: linear-gradient(#e9efff, #cad9ff);
+}
+
+span[class="status"],
+span[class^="rate"] {
+  height: 32px;
+  width: 110px;
+  padding: 5px 8px;
+}
+
+span[class="status"] {
+  border-radius: 6px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+span[class^="rate"] > span {
+  border: 1px solid #54708a;
+  border-radius: 50%;
+  margin: 2px;
+  height: 14px;
+  width: 14px;
+  background-color: #ffffff;
+}
+
+span[class~="one"] span:first-child {
+  background-image: linear-gradient(#ffd46b, #ee9c35);
+}
+
+span[class~="two"] span:first-child,
+span[class~="two"] span:nth-child(2) {
+  background-image: linear-gradient(#ffd46b, #ee9c35);
+}
+
+span[class~="three"] span {
+  background-image: linear-gradient(#ffd46b, #ee9c35);
+}
