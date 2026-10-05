@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- Declares modern HTML5 document structure -->
+
+<html lang="en">
+  <!-- Identifies English as the primary language -->
+
+  <head>
+    <!-- Contains metadata and stylesheet linkage -->
+
+    <meta charset="UTF-8" />
+    <!-- Sets character encoding to standard UTF-8 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures proper scaling across mobile and desktop screens -->
+
+    <title>Stylized To-Do List</title>
+    <!-- Displays page title in browser tab -->
+
+    <!-- External stylesheet link -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Main Header -->
+    <h1>My Stylized To-Do List</h1>
+
+    <!-- Main Unordered List with required class -->
+    <ul class="todo-list">
+
+      <!-- Item 1 -->
+      <li>
+        <input type="checkbox" id="task-1" />
+        <label for="task-1">Read HTML Documentation</label>
+        <ul class="sub-item">
+          <li>
+            <a class="sub-item-link" href="https://developer.mozilla.org" target="_blank">
+              MDN Web Docs
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Item 2 -->
+      <li>
+        <input type="checkbox" id="task-2" />
+        <label for="task-2">Practice CSS Pseudo-classes</label>
+        <ul class="sub-item">
+          <li>
+            <a class="sub-item-link" href="https://css-tricks.com" target="_blank">
+              CSS-Tricks Guide
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Item 3 -->
+      <li>
+        <input type="checkbox" id="task-3" />
+        <label for="task-3">Complete freeCodeCamp Labs</label>
+        <ul class="sub-item">
+          <li>
+            <a class="sub-item-link" href="https://www.freecodecamp.org" target="_blank">
+              freeCodeCamp Curriculum
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Item 4 -->
+      <li>
+        <input type="checkbox" id="task-4" />
+        <label for="task-4">Review Accessibility Guidelines</label>
+        <ul class="sub-item">
+          <li>
+            <a class="sub-item-link" href="https://www.w3.org/WAI/" target="_blank">
+              W3C Web Accessibility Initiative
+            </a>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+  </body>
+</html>
