@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- Declares that this page uses modern HTML5 -->
+
+<html lang="en">
+  <!-- Starts the HTML document and sets English as the primary language -->
+
+  <head>
+    <!-- Contains metadata and configuration not displayed directly on the page -->
+
+    <meta charset="UTF-8" />
+    <!-- Sets character encoding to UTF-8 to display text and symbols correctly -->
+
+    <title>Survey Form</title>
+    <!-- Text displayed in the browser tab -->
+  </head>
+
+  <body>
+    <!-- Main visible content of the page -->
+
+    <!-- Main heading required for the survey form -->
+    <h1 id="title"> Coding Survey</h1>
+
+    <!-- Short description explaining the purpose of the survey -->
+    <p id="description">What did you enjoy about this course </p>
+
+    <!-- Form container holding all interactive user input controls -->
+    <form id="survey-form">
+
+      <!-- Text input for full name (required field) -->
+      <label id="name-label" for="name">Name</label>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        placeholder="Enter your full name"
+        required>
+
+      <!-- Email input with automatic format validation (required field) -->
+      <label id="email-label" for="email">Email</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="Email"
+        required
+      >
+
+      <!-- Numeric input constrained to a specific min/max range -->
+      <label id="number-label" for="number">Hours you can study per week</label>
+      <input
+        id="number"
+        name="study-hours"
+        type="number"
+        min="1"
+        max="40"
+        placeholder="Enter a number from 1-40"
+      >
+       
+      <!-- Dropdown select element for choosing a topic -->
+      <label for="dropdown">What is the most interesting topic?</label>
+      <select id="dropdown" name="favorite-topic">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">JavaScript</option>
+      </select>
+
+      <!-- Fieldset 1: Radio buttons for single-choice option selection -->
+      <fieldset>
+        <legend> How would you prefer to attend classes?</legend>
+
+        <!-- Radio button for Online (shared 'name' ensures single choice) -->
+        <input
+          id="online"
+          type="radio"
+          name="attendance"
+          value="online"
+        > 
+        <label for="online"> Online</label>
+        
+        <!-- Radio button for In-person -->
+        <input
+          id="in-person"
+          type="radio"
+          name="attendance"
+          value="in-person"
+        >
+        <label for="in-person"> In person</label>
+      </fieldset>
+
+      <!-- Fieldset 2: Checkboxes for multiple-choice selections -->
+      <fieldset>
+        <legend>Which activities would you enjoy the most? Select all that apply.</legend>
+
+        <input
+          id="practice"
+          type="checkbox"
+          name="activities"
+          value="practice"
+        >
+        <label for="practice"> Hands-on Practice</label>
+
+        <input
+          id="projects"
+          type="checkbox"
+          name="activities"
+          value="projects"
+        >
+        <label for="projects"> Building Projects</label> 
+           
+        <input
+          id="discussions"
+          type="checkbox"
+          name="activities"
+          value="discussions"
+        >
+        <label for="discussions"> Group Discussions</label> 
+      </fieldset>
+
+      <!-- Multi-line text input for open-ended response -->
+      <label for="comments"> Additional Feedbacks</label> 
+      <textarea
+        id="comments"
+        name="comments"
+        placeholder="Please Share"
+      ></textarea>
+
+      <!-- Form submission button -->
+      <button id="submit" type="submit"> Submit</button>
+
+    </form>
+  </body>
+</html>
